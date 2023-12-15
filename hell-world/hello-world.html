@@ -7,11 +7,16 @@
 <body>
 <div id="content"></div>
 <script type="text/javascript">
-    let h1Element = React.createElement('h1', null, 'Hello World');
+    let h1 = React.createElement('h1', null, 'hello world!');
+    class HelloWorlds extends React.Component {
+        render() {
+            return React.createElement('h1', null, h1, h1);
+        }
+    }
     ReactDOM.render(
-        React.createElement('div', null, h1Element, h1Element, h1Element, h1Element, h1Element, h1Element),
-        document.getElementById("content")
-    );
+        React.createElement(HelloWorlds, null),
+        document.querySelector('#content')
+    )
 </script>
 </body>
 </html>
