@@ -3,6 +3,26 @@ let helloWorldReactElement = React.createElement(
     null,
     'Hello world'
 );
+let inputValue = '서울';
+
+class Autocomplete extends React.Component {
+    updateValue() {
+        this.props.inputValud = '부산';
+        inputValue = '부산';
+        this.inputValue = '부산';
+    }
+    render() {
+        return React.createElement(
+            'div',
+            null,
+            this.props.inputValue,
+            inputValue,
+            this.inputValue
+        );
+    }
+}
+
+ReactDOM.render(React.createElement(Autocomplete, null), document.querySelector('#autocomplete'));
 class HelloWorld extends React.Component {
     render() {
         return React.createElement(
@@ -32,6 +52,7 @@ class Content extends React.Component {
     getUrl() {
         return 'http://shwan.be:8081';
     }
+
     render() {
         return React.createElement(
             'div',
@@ -50,6 +71,7 @@ class Content extends React.Component {
     }
 
 }
+
 ReactDOM.render(React.createElement(Content, null), document.querySelector('#content'));
 ReactDOM.render(React.createElement(ProfileLink, { url: '/user/iiixwon', label: 'Profile for iiixwon' }), document.querySelector('#profile'));
 ReactDOM.render(React.createElement(HelloWorld, { admin: false }), document.querySelector('#helloworld'));

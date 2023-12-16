@@ -1,4 +1,27 @@
 let helloWorldReactElement = <h1>Hello world</h1>;
+let inputValue = '서울'
+
+class Autocomplete extends React.Component{
+    updateValue() {
+        this.props.inputValud = '부산'
+        inputValue = '부산'
+        this.inputValue = '부산'
+    }
+    render() {
+        return (
+            <div>
+                {this.props.inputValue}
+                {inputValue}
+                {this.inputValue}
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(
+    <Autocomplete/>,
+    document.querySelector('#autocomplete')
+)
 class HelloWorld extends React.Component {
     render() {
         return (
@@ -29,6 +52,7 @@ class Content extends React.Component {
             'http://shwan.be:8081'
         )
     }
+
     render() {
         return (
             <div>
@@ -40,6 +64,7 @@ class Content extends React.Component {
     }
 
 }
+
 ReactDOM.render(
     <Content/>,
     document.querySelector('#content')
