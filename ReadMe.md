@@ -1,21 +1,20 @@
-Quiz 4
+Quiz 5
 
-1. 컴포넌트 메서드에서 상태(state)를 설정하는 방법
-> this.setState(a)
+1. componentWillMount()는 서버 렌더링 시에도 호출된다
 
-2. 컴포넌트 내부에서 this.props.a=100 처럼 속성을 변경해도 다시 랜더링 되지 않는다
+2. componentWillMount -> componentDidMount 순으로 호출된다
 
-3. 상태 객체는 변경할 수 있고, 속성은 변경 할 수 없다
+3. componentWillMount는 서버에서 데이터를 가져오기 위해 ajax 요청을하기 적절한 이벤트 핸들러다
 
-4. 상태비저장 컴포넌트는 함수로 구현될 수 있다
+4. componentWillReceiveProps는 부모의 구조로부터 속성 값이 새로운 값을 전달받았는지 확신할 수 없다
 
-5. 엘리먼트를 생성할 떄 초기 상태를 정의하는 방법
-> 생성자에서 this.state=...를 사용하거나 getInitialState()호출
+5. ...Mount 이벤트는 한번 발생한다
+
 ---
 요약
-- 상태 객체는 변경할 수 있다, 속성은 변경할 수 없다
-- 컴포넌트 클래스의 생성자에서 this.state=...를 사용하거나, createClass()를 사용하는 경우 getInitialState()를 호출하여 컴포넌트의 초기 상태 객체를 설정할 수 있다
-- this.setState()는 상태 객체 전테가 아니라 전달한 항목만 갱신한다.
-- {}는 JSX코드에서 변수를  추력하고 자바스크립트를 실행할 떄 사용한다
-- 상태 객체는 this.state.NAME으로 접근한다
-- 상태비저장 컴포넌트는 React를 다룰 때 선호되는 방식이다
+- componentWillMount()는 서버와 클라이언트에서 모두 실행되는 반면에, componentDidMount()는 클리언트에서만 실행된다
+- 마운팅 이벤트는 일반젇으로 React를 다른 라이브러리와 통합하거나 저자소 또는 서버에서 데이터를 가져올떄 사용한다
+- shouldComponentUpdate() 사용해서 렌더링을 최적화할 수 있다 return true or false
+- componentWillReceiveProps()를 사용하면 새로운 속성이 전달될 때 상태를 변경할 수 있다, 다만 렌더링은 되지 않는다
+- 언마운팅 이벤트는 일반적으로 정리에 사용된다
+- 갱신 이벤트는 새로운 속성이나 상태를 의존하는 로직을 작성할 떄 사용 되고, 뷰를 갱신하는 시점을 세밀하게 조절할 수 있다

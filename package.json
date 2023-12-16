@@ -10,9 +10,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel hell-world/js/script.jsx -o hell-world/js/script.js",
-    "build-clock" : "./node_modules/.bin/babel clock/js -d clock/dist",
-    "build-digianal-clock" : "./node_modules/.bin/babel clock-digital-analog/js -d clock-digital-analog/dist"
+    "build": "./node_modules/.bin/babel event/js -d event/js",
+    "build-user": "./node_modules/.bin/babel user/js -d user/js",
+    "build-note": "./node_modules/.bin/babel note/js -d note/js"
   },
   "author": "",
   "license": "ISC",
