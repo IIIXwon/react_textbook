@@ -2,8 +2,8 @@ let helloWorldReactElement = <h1>Hello world</h1>;
 class HelloWorld extends React.Component {
     render() {
         return (
-            <div>
-                {helloWorldReactElement},
+            <div className={!this.props.admin ? 'hidden' : 'display'}>
+                {helloWorldReactElement}
                 {helloWorldReactElement}
             </div>
         )
@@ -11,7 +11,7 @@ class HelloWorld extends React.Component {
 }
 
 class ProfileLink extends React.Component {
-    return() {
+    render() {
         return (
             <a
                 href={this.props.url}
@@ -45,10 +45,10 @@ ReactDOM.render(
     document.querySelector('#content')
 )
 ReactDOM.render(
-    <HelloWorld/>,
-    document.querySelector('#content')
-);
-ReactDOM.render(
     <ProfileLink url='/user/iiixwon' label='Profile for iiixwon'/>,
-    document.querySelector('#content')
-);
+    document.querySelector('#profile')
+)
+ReactDOM.render(
+    <HelloWorld admin={false}/>,
+    document.querySelector('#helloworld')
+)
