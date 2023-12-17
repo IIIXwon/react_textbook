@@ -1,18 +1,16 @@
 let secondsLeft = 5
 let interval = setInterval(() => {
-    if (!secondsLeft) {
+    if (secondsLeft === 0) {
         ReactDOM.render(
             <div>
-                note는 {secondsLeft}초 후에 제거됩니다
+                Note was removed after {secondsLeft} seconds.
             </div>,
-            document.querySelector('#content')
+            document.getElementById('content')
         )
         clearInterval(interval)
     } else {
         ReactDOM.render(
-            <div>
-                <Note secondsLeft={secondsLeft}/>
-            </div>,
+            <Radio id={1} name='test' label='test2' order={2}></Radio>,
             document.querySelector('#content')
         )
     }

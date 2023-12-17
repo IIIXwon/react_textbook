@@ -10,9 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel event/js -d event/js",
-    "build-user": "./node_modules/.bin/babel user/js -d user/js",
-    "build-note": "./node_modules/.bin/babel note/js -d note/js"
+    "build": "./node_modules/.bin/babel button/js -d button/js",
+    "build-radio": "./node_modules/.bin/babel radio/js -d radio/dist"
   },
   "author": "",
   "license": "ISC",
