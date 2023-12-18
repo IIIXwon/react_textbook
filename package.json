@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/babel button/js -d button/dist --sourceMaps=true",
-    "build-tooltip": "./node_modules/.bin/babel tooltip/js -d tooltip/dist --sourceMaps=true"
+    "build-timer": "./node_modules/.bin/babel timer/js -d timer/dist --sourceMaps=true"
   },
   "author": "",
   "license": "ISC",
