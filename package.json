@@ -10,14 +10,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel radio/js -d radio/dist",
-    "build-account": "./node_modules/.bin/babel account/js -d account/dist",
-    "build-uncontroll": "./node_modules/.bin/babel uncontroll/js -d uncontroll/dist"
+    "build": "./node_modules/.bin/babel button/js -d button/dist --sourceMaps=true",
+    "build-order": "./node_modules/.bin/babel hi-order/js -d hi-order/dist --sourceMaps=true"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "6.24.1",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "prop-types": "^15.5.4"
   }
 }
