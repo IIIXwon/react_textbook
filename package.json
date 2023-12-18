@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/babel button/js -d button/dist --sourceMaps=true",
-    "build-order": "./node_modules/.bin/babel hi-order/js -d hi-order/dist --sourceMaps=true"
+    "build-menu": "./node_modules/.bin/babel menu/js -d menu/dist --sourceMaps=true",
+    "build-menuWithJSX": "./node_modules/.bin/babel menuWithJSX/js -d menuWithJSX/dist --sourceMaps=true"
   },
   "author": "",
   "license": "ISC",
